@@ -14,7 +14,7 @@ sub-sections for the documentation of this theme.
 hugo new site decaf-docs-something
 cd decaf-docs-something/
 git init
-git submodule add git@github.com:telostat/decaf-docs-theme.git themes/decaf-docs-theme
+git submodule add https://github.com/telostat/decaf-docs-theme.git themes/decaf-docs-theme
 echo 'theme = "decaf-docs-theme"' >> config.toml
 mkdir content/pages/
 echo -e "---\ntitle: Sample\ndate: 2019-01-01\n---\n\nHello" > content/pages/sample.md
