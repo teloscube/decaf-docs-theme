@@ -1,0 +1,8 @@
+baseURL = "https://decafdocstheme.netlify.com/"
+languageCode = "en-us"
+title = "DECAF Documentation Theme"
+theme = "decafdocs"
+
+[params.extsites]
+  google = "https://www.google.com"
+  hoogle = "https://hoogle.haskell.org"

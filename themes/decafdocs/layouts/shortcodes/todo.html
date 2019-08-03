@@ -1,0 +1,18 @@
+{{ $isClosed := (isset .Params "closed") }}
+{{ $style := (cond $isClosed "success" "warning") }}
+<div class="alert alert-{{ $style }}" role="alert">
+  <span class="badge-group mr-3">
+    <span class="badge badge-{{ $style }}">TODO</span>
+    {{ with ( .Get "assignee" ) }}
+    <span class="badge badge-primary">{{ . }}</span>
+    {{ end }}
+    {{ with ( .Get "closed" ) }}
+    <span class="badge badge-secondary">Completed on {{ . | dateFormat "02-01-2006" }}</span>
+    {{ end }}
+  </span>
+  {{ if $isClosed }}
+  <del>{{ .Inner | markdownify }}</del>
+  {{ else }}
+  {{ .Inner | markdownify }}
+  {{ end }}
+</div>
