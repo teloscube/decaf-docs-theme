@@ -22,7 +22,7 @@ echo "/resources" > .gitignore
 hugo server
 ```
 
-[Visit your page at http://localhost:1313/pages/sample/](http://localhost:1313/pages/sample/).
+Visit your sample page on [http://localhost:1313/pages/sample/](http://localhost:1313/pages/sample/).
 
 ## Shortcodes
 
