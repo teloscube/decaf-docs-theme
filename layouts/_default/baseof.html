@@ -22,6 +22,18 @@
     <script src="/ext/bootstrap/bootstrap.min.js"></script>
     <script src="/ext/colorbox/jquery.colorbox-min.js"></script>
     <script src="/js/main.js"></script>
+
+    {{ if .Site.Params.googleAnalytics }}
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123511987-22"></script>
+    <script>
+     window.dataLayer = window.dataLayer || [];
+     function gtag(){dataLayer.push(arguments);}
+     gtag('js', new Date());
+
+     gtag('config', '{{.Site.Params.googleAnalytics}}');
+    </script>
+    {{ end }}
     {{- partial "html-foot.html"   . -}}
   </body>
 </html>
