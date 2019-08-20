@@ -14,7 +14,7 @@
 	{{ range $index, $section := .Site.Sections }}
 	<li class="nav-item dropdown">
 	  <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown">{{ $section.Title }}</a>
-	  <div class="dropdown-menu">
+	  <div class="dropdown-menu dropdown-menu-right">
 	    {{ range $section.Pages }}
 	    <a class="dropdown-item" href="{{ .RelPermalink }}">{{ .Title }}</a>
 	    {{ end }}
